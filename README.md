@@ -18,6 +18,14 @@ Built by [Abdul Rasak V](https://github.com/razinahmed)
 
 ---
 
+## 📸 Preview
+
+<div align="center">
+<img src="screenshots/api-docs.svg" alt="REST API Documentation Preview" width="100%">
+</div>
+
+---
+
 ## API Architecture Overview
 
 ```
