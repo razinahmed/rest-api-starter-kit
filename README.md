@@ -18,30 +18,49 @@ Built by [Abdul Rasak V](https://github.com/razinahmed)
 
 ---
 
-## Visual Overview
+## API Architecture Overview
 
-<div align="center">
-
-### API Documentation & Swagger
-
-![REST API Swagger Docs](https://via.placeholder.com/800x450/0d1117/00d4aa?text=REST+API+Swagger+Docs)
-
-### Modern API Architecture
-
-![API Architecture](https://via.placeholder.com/800x450/0d1117/4ecdc4?text=API+Architecture)
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://via.placeholder.com/400x250/0d1117/ff6b6b?text=JWT+Authentication" alt="JWT Auth" width="100%">
-    </td>
-    <td align="center">
-      <img src="https://via.placeholder.com/400x250/0d1117/7c3aed?text=Docker+Ready" alt="Docker Ready" width="100%">
-    </td>
-  </tr>
-</table>
-
-</div>
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    CLIENT APPLICATION                       │
+│              (Web, Mobile, Desktop)                          │
+└──────────────────────┬──────────────────────────────────────┘
+                       │ HTTP/REST Requests
+                       ▼
+        ┌──────────────────────────────┐
+        │     FastAPI Application      │
+        │  • Route Handlers            │
+        │  • Input Validation          │
+        │  • Error Responses           │
+        └──────────┬───────────────────┘
+                   │
+        ┌──────────▼──────────┐
+        │ JWT Authentication  │
+        │ & Authorization     │
+        │ (Role-Based Access) │
+        └──────────┬──────────┘
+                   │
+        ┌──────────▼──────────┐
+        │   Business Logic    │
+        │   (Service Layer)   │
+        │   • User Management │
+        │   • Item Operations │
+        └──────────┬──────────┘
+                   │
+        ┌──────────▼──────────────────┐
+        │   SQLAlchemy ORM            │
+        │   • Model Definitions       │
+        │   • Query Building          │
+        │   • Data Relationships      │
+        └──────────┬──────────────────┘
+                   │
+        ┌──────────▼──────────────────┐
+        │    PostgreSQL Database      │
+        │  • User Accounts            │
+        │  • Items & Data Storage     │
+        │  • Persistent State         │
+        └─────────────────────────────┘
+```
 
 ---
 
@@ -80,42 +99,6 @@ Built by [Abdul Rasak V](https://github.com/razinahmed)
 | **Server** | Uvicorn | Latest |
 
 </div>
-
----
-
-## Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    CLIENT APPLICATION                       │
-└──────────────────────┬──────────────────────────────────────┘
-                       │
-                       ▼
-        ┌──────────────────────────────┐
-        │     FastAPI Application      │
-        │  (Route Handlers & Validation)│
-        └──────────┬───────────────────┘
-                   │
-        ┌──────────▼──────────┐
-        │  JWT Authentication │
-        │  & Authorization    │
-        └──────────┬──────────┘
-                   │
-        ┌──────────▼──────────┐
-        │   Business Logic    │
-        │   (Service Layer)   │
-        └──────────┬──────────┘
-                   │
-        ┌──────────▼──────────────────┐
-        │   SQLAlchemy ORM            │
-        │   (Database Abstraction)    │
-        └──────────┬──────────────────┘
-                   │
-        ┌──────────▼──────────────────┐
-        │    PostgreSQL Database      │
-        │  (Persistent Data Storage)  │
-        └─────────────────────────────┘
-```
 
 ---
 
@@ -604,7 +587,7 @@ Need help? Check out these resources:
 
 ### Made with love by [Abdul Rasak V](https://github.com/razinahmed)
 
-If you find this project helpful, please consider giving it a ⭐
+If you find this project helpful, please consider giving it a star!
 
 **Happy coding!**
 
