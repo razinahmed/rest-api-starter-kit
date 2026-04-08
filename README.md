@@ -8,7 +8,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-d82633?style=for-the-badge&logo=sqlalchemy&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
 
 **A production-ready REST API boilerplate with FastAPI, JWT authentication, SQLAlchemy ORM, and Docker support**
 
